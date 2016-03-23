@@ -2,7 +2,7 @@
 
 function thousands_separators(num) {
   var parts = num.toString().split('.');
-  var decimal = parts[1] ? '.' + parts[1] || '';
+  var decimal = parts[1] ? '.' + parts[1] : '';
   var integer = parts[0];
   var numarr = integer.toString().split('').reverse();
   var resultarr = [];

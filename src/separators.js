@@ -1,8 +1,9 @@
 'use strict';
 
 function thousands_separators(num) {
-  var decimal = num.toString().split('.')[1] || '';
-  var integer = num.toString().split('.')[0];
+  var parts = num.toString().split('.');
+  var decimal = parts[1] ? '.' + parts[1] || '';
+  var integer = parts[0];
   var numarr = integer.toString().split('').reverse();
   var resultarr = [];
   for(var i=0; i<numarr.length; i++) {
@@ -11,7 +12,7 @@ function thousands_separators(num) {
       resultarr.unshift(',');
     }
   }
-  return resultarr.join('') + '.' + decimal;
+  return resultarr.join('') + decimal;
 }
 
 module.exports = thousands_separators;

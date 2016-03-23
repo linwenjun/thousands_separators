@@ -1,10 +1,10 @@
 'use strict';
 
 function thousands_separators(num) {
-  var numarr = num.toString().split('');
+  var numarr = num.toString().split('').reverse();
   var resultarr = [];
-  for(var i=numarr.length-1; i>=0; i--) {
-    resultarr.unshift(numarr[i]);
+  for(var i=0; i<=numarr; i++) {
+    resultarr.push(numarr[i]);
     if(i%3===0) {
       resultarr.unshift(',');
     }

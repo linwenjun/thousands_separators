@@ -11,7 +11,7 @@ function thousands_separators(num) {
       resultarr.unshift(',');
     }
   }
-  return resultarr.join('') + decimal;
+  return resultarr.join('') + '.' + decimal;
 }
 
 module.exports = thousands_separators;
